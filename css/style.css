@@ -18,10 +18,14 @@ body {
     justify-content: center;
 }
 
+main {
+    gap: 35px;
+}
+
 .main-container {
     width: 100%;
     max-width: 1440px;
-    padding: 0 50px;
+    padding: 0 50px 0 50px;
     box-sizing: border-box;
 }
 
@@ -58,11 +62,11 @@ a {
     color: var(--main-bg-color)
 }
 
-/****** header *****/
-
-header {
-    height: 79px;
+h3 {
+    padding: 0px;
 }
+
+/****** header *****/
 
 
 nav {
@@ -76,7 +80,7 @@ nav > a {
 
 nav ul {
     display: flex;
-    padding: 0px, 50px, 0px, 50px;
+    padding: 0px 50px 0px 50px;
     gap: 68px;
     list-style: none;
 }
@@ -90,33 +94,63 @@ nav ul li a:hover {
     border-color: #0065FC;
     color: #0065FC;
 }
+/** utilitaire **/
 
+.d-column {
+    flex-direction: column;
+}
 
+.d-flex {
+    display: flex;
+}
+.d-grow {
+    display: flex;
+    flex-grow: 1;
+}
+
+.d-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.d-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.d-justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+.d-align-center {
+    display: flex;
+    align-items: center;
+}
+    
 /****** info container *****/
 
 .info-container {
-    flex-direction: column;
     display: flex;
     justify-content: flex-start;
-    gap: 24px;
+}
+
+.info-container .d-column {
+    gap: 30px;
 }
 
 .info-container h1 {
     margin-bottom: 0px;
 }
 
+
 /****** barre de recherche section *****/
 
 .search-bar {
-    display: flex;
-    align-items: center; /* Aligne verticalement au centre */
     justify-content: flex-start;
 }
 
 .search-bar i {
-    display: flex;
-    align-items: center; /* Aligne verticalement au centre */
-    justify-content: center;
     width: 50px;
     height: 49px;
     color: black;
@@ -127,7 +161,7 @@ nav ul li a:hover {
 }
 
 .search-bar input {
-    height: 47px;
+    height: 49px;
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
     font-weight: 700;
@@ -136,10 +170,7 @@ nav ul li a:hover {
 }
 
 .search-bar button {
-    width: 132px;
-    height: 49px;
-    padding: 15px, 16px, 15px, 16px;
-    gap: 10px;
+    padding: 15px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px; 
     border: 1px solid #0065FC;
@@ -152,26 +183,27 @@ nav ul li a:hover {
 }
 
 /****** section button filtre *****/
-
+.buttons-filters {
+    gap: 15px;
+}
 .filters {
     display: flex;
-    align-items: center; /* Aligne verticalement au centre */
+    flex-direction: row;
     justify-content: flex-start; /* Espace entre les éléments */
     gap: 15px;
 }
 
 .filters button {
-    width: 173px;
-    height: 50px;
+    padding: 15px;
     font-weight: 700;
     border-radius: 25px;  
     border: 2px solid #D9D9D9;   
     background-color: white;
+    gap: 10px;
 }
 
 .filters button i {
     font-size: 22px;
-    margin-right: 10px;
 }
 
 .filters button:hover {
@@ -184,11 +216,6 @@ nav ul li a:hover {
 
 .d-none {
     display: none;
-}
-.filters-info {
-    display: flex;
-    align-items: center; /* Aligne verticalement au centre */
-    justify-content: flex-start;    
 }
 
 /****** Hebergements And Populaires ***********/
@@ -208,22 +235,27 @@ nav ul li a:hover {
 
 .hebergements {
     width: 65%;
+    gap: 30px;
 }
 
-.hebergements .hebergements-grid {
-    width: 100%;    
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    margin-top: 33px;
+.hebergements-grid {
+    gap: 30px;
+}
+
+.hebergements-grid .d-row a {
+    flex: 1;
+    border: solid 5px;
+    border-color: white;
+    border-radius: 20px;
+}
+
+.hebergements-grid .d-row {
     gap: 30px;
 }
 
 .appart-card {
-    width: 250px;
     background-color: white;
-    border-radius: 20px;
+    padding: 0 0 15px 0;
 }
 
 .appart-card img {
@@ -235,14 +267,18 @@ nav ul li a:hover {
 }
 
 .appart-card .card-content {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
-    gap: 0px;
+    padding: 0 15px 0 15px;
+    gap: 8px;
+}
+
+.card-title {
+    margin: 8px 0 0 0;
+}
+
+.card-subtitle {
+    margin: 8px 0 0 0;
 }
 
 /****** Populaires ***********/
@@ -294,20 +330,19 @@ nav ul li a:hover {
 /****** Activités ***********/
 
 .activites-marseille {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    gap: 30px;
 }
 
 .section-cards {
     display: flex;
-    flex-direction: row;
-    margin-top: 25px;
     gap: 30px;
 }
 
+.section-cards a {
+    flex: 1;
+}
+
 .activites-card {
-    width: 297px;
-    height: 439px;
     border-radius: 20px;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
 }
@@ -323,41 +358,45 @@ nav ul li a:hover {
 .activites-content h3 {
     font-family: 'raleway', sans-serif;
     font-size: 16px;
-    margin-left: 20px;
+    padding-left: 20px;
+
 }
 
 /** footer **/
 
+footer section div {
+    flex: 1;
+}
 
 .section-footer {
-    display: flex;
+    justify-content: space-between;
     background-color: #F2F2F2;
     padding: 20px;
-    margin-bottom: 0px;
 }
 
-.column-menu {
-    width: 446px;
-}
-
-footer div nav {
-    display: flex ;
-    flex-direction: column;
-    width: 100%;
-}
-
-footer div nav ul {
+.column-menu nav {
     display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
+ 
+}
+footer div nav ul {
     gap: 15px;
     padding-left: 0px;
 }
 
+footer section div nav h3 {
+    margin: 0px;
+}
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+    .filters {
+        flex-direction: column;
+    }
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -388,9 +427,43 @@ footer div nav ul {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .activites-marseille article img {
+        height: 200px;
+    }
+
+    .activites-marseille article div {
+        display: flex;
+        align-items: center;
+        height: 70px;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /* ... */
+
+    .main-container {
+        margin: 0px;
+        padding: 0 20px 0 20px;
+        flex-direction: column;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    menu {
+        flex-direction: row;
+    }
+
+    .search-bar span {
+        display: ;
+    }
+
+    .buttons-filters {
+        flex-wrap: wrap;
+    }
+
 }
+
