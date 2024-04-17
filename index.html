@@ -18,45 +18,41 @@
 <body>
     <div class="main-container">
         <header>
+            <a href="index.html"><img src="./images/logo/Booki.png" width="60" height="19" alt="logo du site"></a>
             <nav class="menu">
-                <a href="index.html"><img src="./images/logo/Booki.png" width="60" height="19" alt="logo du site"></a>
                 <ul class="nav-menu">
-                    <li><a href="#hébergement">Hébergements</a></li>
-                    <li><a href="#Activités">Activités</a></li>
+                    <li class="nav-hebergement"><a href="#hébergement">Hébergements</a></li>
+                    <li class="nav-activites"><a class="gris" href="#Activités">Activités</a></li>
                 </ul>
             </nav>  
         </header>
         <main>
             <section class="info-container">
-                <div class="d-flex d-column">
-                    <div class="info-title">
-                        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-                        <p>En plein centre-ville ou en pleine nature</p>
-                    </div>
-                    <div class="search-bar">
-                        <div class="icon-container">
-                            <i class="fa-solid fa-location-dot d-align-center d-justify-center"></i>
-                        </div>
-                        <input type="text" name="q" value="Marseille, France">
-                        <button type="submit" class="submit-search d-align-center d-justify-center">
-                            <span>Rechercher</span>
-                            <span class="d-none"><i class="fa-solid fa-magnifying-glass"></i></span>
-                        </button>
-                    </div>
-                    <div class="filters">
-                        <h3>Filtres</h3>
-                        <div class="buttons-filters">
-                            <button class="d-flex d-align-center"><i class="fa-solid fa-money-bill-wave"></i>Économique</button>
-                            <button class="d-flex d-align-center"><i class="fa-solid fa-person"></i>Familial</button>
-                            <button class="d-flex d-align-center"><i class="fa-solid fa-heart"></i>Romantique</button>
-                            <button class="d-flex d-align-center"><i class="fa-solid fa-fire"></i>Nos pépites</button>
-                        </div>
-                    </div>
-                    <div class="filters-info d-flex d-align-center">
-                        <i class="fa-solid fa-info"></i>
-                        <p>Plus de 500 logements sont disponibles dans cette ville</p>
+                <div class="info-title">
+                    <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                    <p>En plein centre-ville ou en pleine nature</p>
+                </div>
+                <div class="search-bar">
+                    <span class="pin-map-search"><i class="fa-solid fa-location-dot"></i></span>
+                    <input type="text" name="q" value="Marseille, France">
+                    <button type="submit" class="submit-search">
+                        <span class="desktop-search">Rechercher</span>
+                        <span class="mobile-search"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    </button>
+                </div>
+                <div class="filters">
+                    <h3>Filtres</h3>
+                    <div class="buttons-filters">
+                        <button><i class="fa-solid fa-money-bill-wave"></i>Économique</button>
+                        <button><i class="fa-solid fa-person"></i>Familial</button>
+                        <button><i class="fa-solid fa-heart"></i>Romantique</button>
+                        <button><i class="fa-solid fa-fire"></i>Nos pépites</button>
                     </div>
                 </div>
+                <div class="filters-info">
+                    <i class="fa-solid fa-info"></i>
+                    <p>Plus de 500 logements sont disponibles dans cette ville</p>
+                </div>  
             </section>
             <div class="hebergements-and-populaires">
                 <section class="hebergements">
@@ -257,7 +253,7 @@
                     <a href="#">
                         <article class="activites-card">
                             <img src="./images/activites/reno-laithienne.jpg" alt="image du vieux-port de marseille">
-                            <div class="activites-content d-align-center">
+                            <div class="activites-content">
                                 <h3>Vieux Port</h3>
                             </div>
                         </article>
@@ -265,7 +261,7 @@
                     <a href="#">
                         <article class="activites-card">
                             <img src="./images/activites/paul-hermann.jpg" alt="image du Fort de Pomègues">
-                            <div class="activites-content d-align-center">
+                            <div class="activites-content">
                                 <h3>Fort de Pomègues</h3>
                             </div>
                         </article>
@@ -273,7 +269,7 @@
                     <a href="#">
                         <article class="activites-card">
                             <img src="./images/activites/kilyan-sockalingum.jpg" alt="image du Parc National des Calanques">
-                            <div class="activites-content d-align-center">
+                            <div class="activites-content">
                                 <h3>Parc National des Calanques</h3>
                             </div>
                         </article>
@@ -281,7 +277,7 @@
                     <a href="#">
                         <article class="activites-card">
                             <img src="./images/activites/florian-wehde.jpg" alt="image de Notre-Dame-de-la-Garde">
-                            <div class="activites-content d-align-center">
+                            <div class="activites-content">
                                 <h3>Notre-Dame-de-la-Garde</h3>
                             </div>
                         </article>
